@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="main-card">
+        <div class="header">
+            <h1 id="question">Will you be my Valentine? 🥺</h1>
+        </div>
+        
+        <div class="gif-container" id="media-container">
+            <!-- First GIF (Asking Phase): Mochi Kawaii -->
+            <img id="asking-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpndW1uNHByY3R4Y2Z6ZWZhaW14eTV4eXJkeHd4eXJkeHd4eXJkeHcmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/e1Tf1eOo6976zuGv3C/giphy.gif" alt="Asking GIF">
+            
+            <!-- Second GIF (Ngambek Phase): Side-eye Cat -->
+            <img id="ngambek-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpndW1uNHByY3R4Y2Z6ZWZhaW14eTV4eXJkeHd4eXJkeHd4eXJkeHcmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/GAXXHdS0zXawVLOJLY/giphy.gif" class="hidden" alt="Ngambek GIF">
+        </div>
+
+        <div class="buttons">
+            <button id="yes-btn">Yes! ✨</button>
+            <button id="no-btn">No... 💔</button>
+        </div>
+    </div>
+
+    <div id="success-screen" class="hidden">
+        <h1 class="success-msg">Yay! I Love You! ❤️✨</h1>
+        <!-- Final Celebration GIF: Mochi Love -->
+        <img id="success-gif" src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpndW1uNHByY3R4Y2Z6ZWZhaW14eTV4eXJkeHd4eXJkeHd4eXJkeHcmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PWc/rT7WPCciy8oETxLmUV/giphy.gif" alt="Success GIF">
+        <div class="confetti-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
