@@ -54,6 +54,10 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+.hidden {
+    display: none !important;
+}
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -89,14 +93,10 @@ button {
     color: #888;
     z-index: 9999;
     white-space: nowrap;
-    transition: transform 0.1s ease; /* Subtle rotation transition only */
+    transition: transform 0.1s ease;
 }
 
 /* Success Screen */
-.hidden {
-    display: none !important;
-}
-
 #success-screen {
     position: fixed;
     top: 0;
@@ -133,24 +133,25 @@ button {
     box-shadow: 0 10px 30px rgba(255, 77, 109, 0.2);
 }
 
-.heart-floating {
-    position: fixed;
-    bottom: -50px;
-    user-select: none;
-    pointer-events: none;
-    z-index: 99;
-    animation: floatUp linear forwards;
-}
-
-@keyframes floatUp {
+/* Falling Hearts */
+@keyframes fallDown {
     0% {
-        transform: translateY(0) rotate(0deg);
+        transform: translateY(-10vh) rotate(0deg);
         opacity: 1;
     }
     100% {
-        transform: translateY(-110vh) rotate(360deg);
+        transform: translateY(110vh) rotate(360deg);
         opacity: 0;
     }
+}
+
+.heart-falling {
+    position: fixed;
+    top: -50px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 99;
+    animation: fallDown linear forwards;
 }
 
 /* Responsive adjustments */

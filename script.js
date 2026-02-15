@@ -95,12 +95,19 @@ function startCelebration() {
 function createHeart() {
     const heart = document.createElement('div');
     heart.innerHTML = '❤️';
-    heart.className = 'heart-floating';
+    heart.className = 'heart-falling';
     heart.style.left = Math.random() * 100 + 'vw';
+    
+    // Randomize initial top position slightly so they don't all start at once
+    heart.style.top = '-' + (Math.random() * 20 + 20) + 'px';
+    
     const size = Math.random() * 20 + 20;
     heart.style.fontSize = size + 'px';
+    
     const duration = Math.random() * 3 + 2;
     heart.style.animationDuration = duration + 's';
+    
     document.body.appendChild(heart);
+    
     setTimeout(() => heart.remove(), duration * 1000);
 }
